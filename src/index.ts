@@ -1,4 +1,5 @@
 /**
+ * Rewardful plugin for Analytics
  *
  * There's no npm package, so we need to load it directly into the browser, like google analytics.
  *
@@ -59,15 +60,15 @@ export function insertScript(scriptSrc: string, apiKey: string): void {
 }
 
 /**
- * Inject `window.rewardful`
+ * Inject `window.rewardful` preload script
  *
- * https://developers.rewardful.com/javascript-api/overview
+ * @see https://developers.rewardful.com/javascript-api/overview
  */
 function injectPreloadScript() {
   if (typeof window.rewardful !== "undefined")
     return false
 
-    // script injection below is copy/pasted from the rewardful docs
+  // script injection below is copy/pasted from the rewardful docs
   ;(function (w, r) {
     w._rwq = r
     w[r] =
@@ -80,6 +81,11 @@ function injectPreloadScript() {
   return true
 }
 
+/**
+ * Inject `window.rewardful`
+ *
+ * https://developers.rewardful.com/javascript-api/overview
+ */
 export default function rewardfulPlugin(
   config: RewardfulPluginConfig,
 ): AnalyticsPlugin {

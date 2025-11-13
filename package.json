@@ -1,0 +1,35 @@
+{
+  "name": "analytics-plugin-rewardful",
+  "version": "0.1.0",
+  "description": "Rewardful plugin for Analytics",
+  "main": "dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc && bun run bun.build.ts",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "analytics",
+    "rewardful",
+    "affiliate",
+    "referral",
+    "tracking"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iloveitaly/analytics-plugin-rewardful.git"
+  },
+  "peerDependencies": {
+    "analytics": ">=0.7.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.3"
+  },
+  "files": [
+    "dist"
+  ]
+}

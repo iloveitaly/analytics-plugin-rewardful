@@ -1,26 +1,35 @@
 /**
  * Rewardful plugin for Analytics
  *
- * Integrates Rewardful affiliate tracking with the analytics library.
+ * There's no npm package, so we need to load it directly into the browser, like google analytics.
  *
- * @see https://developers.rewardful.com/javascript-api/overview
+ * https://developers.rewardful.com/javascript-api/overview
+ *
+ * Example plugins:
+ *
+ * - https://github.com/deevus/analytics-plugin-posthog/blob/main/src/index.ts
+ * - https://github.com/deevus/analytics-plugin-tapfiliate/blob/develop/src/index.ts
+ * - https://github.com/metro-fs/analytics-plugin-posthog/blob/main/src/index.ts
+ * - https://github.com/DavidWells/analytics/blob/master/packages/analytics-plugin-google-tag-manager/src/browser.js
  */
 import { AnalyticsInstance, AnalyticsPlugin } from "analytics"
 
 declare global {
   interface Window {
-    rewardful?: any
-    Rewardful?: any
-    _rwq?: any
+    rewardful?: unknown
+    Rewardful?: unknown
   }
 }
 
+// TODO why is this needed? Why can't we define this within analytics?
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Metadata = Record<string, any>
 
 export interface RewardfulPluginConfig {
   apiKey: string
 }
 
+// TODO feels like this should be in the analytics package as well
 interface Params {
   payload: {
     event: string
@@ -59,7 +68,7 @@ function injectPreloadScript() {
   if (typeof window.rewardful !== "undefined")
     return false
 
-  // Script injection below is from the Rewardful documentation
+  // script injection below is copy/pasted from the rewardful docs
   ;(function (w, r) {
     w._rwq = r
     w[r] =
@@ -73,28 +82,9 @@ function injectPreloadScript() {
 }
 
 /**
- * Rewardful analytics plugin
+ * Inject `window.rewardful`
  *
- * @param config - Plugin configuration
- * @param config.apiKey - Your Rewardful API key
- *
- * @example
- * ```typescript
- * import Analytics from 'analytics'
- * import rewardfulPlugin from 'analytics-plugin-rewardful'
- *
- * const analytics = Analytics({
- *   app: 'my-app',
- *   plugins: [
- *     rewardfulPlugin({
- *       apiKey: 'your-api-key'
- *     })
- *   ]
- * })
- *
- * // Track a conversion
- * analytics.plugins.rewardful.conversion('user@example.com')
- * ```
+ * https://developers.rewardful.com/javascript-api/overview
  */
 export default function rewardfulPlugin(
   config: RewardfulPluginConfig,
@@ -106,17 +96,13 @@ export default function rewardfulPlugin(
     config,
 
     initialize({ config }: Params): void {
-      // Browser only - Rewardful is a client-side script
+      // browser only
       if (typeof window === "undefined") {
         return
       }
 
-      if (!config.apiKey) {
-        throw new Error("Rewardful API key is required")
-      }
-
       if (injectPreloadScript()) {
-        // Only attach a listener once, in case this is initialized multiple times
+        // only attach a listener once, in case this is initialized multiple times
         window.rewardful("ready", function () {
           isReady = true
         })
@@ -127,22 +113,18 @@ export default function rewardfulPlugin(
       }
     },
 
+    // TODO support conversion event via `track`?
+    // page: ({ payload }: Params) => {},
+    // track: ({ payload }: Params) => {},
+    // identify: ({ payload }: Params) => {},
+
     loaded() {
       return isReady
     },
 
     methods: {
-      /**
-       * Track a conversion in Rewardful
-       *
-       * @param email - The email address of the converting user
-       */
       conversion(this: { instance: AnalyticsInstance }, email: string) {
-        if (typeof window === "undefined" || !window.rewardful) {
-          console.warn("Rewardful is not loaded")
-          return
-        }
-
+        // this methods accepts no additional arguments/traits
         window.rewardful("convert", { email })
       },
     },

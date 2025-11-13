@@ -1,0 +1,25 @@
+# Source files
+src/
+
+# Build configuration
+tsconfig.json
+bun.build.ts
+
+# Development files
+yarn-error.log
+node_modules/
+.cache/
+*.tgz
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.idea/
+.vscode/
+
+# Tests
+*.test.ts
+*.test.js
+__tests__/

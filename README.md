@@ -7,13 +7,7 @@ This library exports the Rewardful plugin for the analytics package. It makes it
 ## Installation
 
 ```bash
-npm install analytics analytics-plugin-rewardful
-```
-
-Or with yarn:
-
-```bash
-yarn add analytics analytics-plugin-rewardful
+pnpm install analytics analytics-plugin-rewardful
 ```
 
 ## Usage

@@ -14,10 +14,22 @@
  */
 import { AnalyticsInstance, AnalyticsPlugin } from "analytics"
 
+// Rewardful function type
+interface RewardfulFunction {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (action: string, ...args: any[]): void
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  q?: any[]
+}
+
 declare global {
   interface Window {
-    rewardful?: unknown
+    rewardful?: RewardfulFunction
     Rewardful?: unknown
+    _rwq?: string
+    // Allow dynamic string indexing for the preload script
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    [key: string]: any
   }
 }
 
@@ -103,7 +115,7 @@ export default function rewardfulPlugin(
 
       if (injectPreloadScript()) {
         // only attach a listener once, in case this is initialized multiple times
-        window.rewardful("ready", function () {
+        window.rewardful?.("ready", function () {
           isReady = true
         })
       }
@@ -125,7 +137,7 @@ export default function rewardfulPlugin(
     methods: {
       conversion(this: { instance: AnalyticsInstance }, email: string) {
         // this methods accepts no additional arguments/traits
-        window.rewardful("convert", { email })
+        window.rewardful?.("convert", { email })
       },
     },
   }

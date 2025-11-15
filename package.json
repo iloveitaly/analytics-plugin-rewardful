@@ -2,12 +2,13 @@
   "name": "analytics-plugin-rewardful",
   "version": "0.1.0",
   "description": "Rewardful plugin for Analytics",
+  "type": "module",
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "tsc --watch",
     "build": "tsc && bun run bun.build.ts",
-    "prepare": "npm run build"
+    "prepare": "bun run build"
   },
   "keywords": [
     "analytics",

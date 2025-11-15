@@ -6,9 +6,9 @@
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "dev": "pnpm build --watch",
-    "build": "tsup src/index.ts --dts --format esm",
-    "prepare": "pnpm run build"
+    "dev": "tsc --watch",
+    "build": "tsc && bun run bun.build.ts",
+    "prepare": "npm run build"
   },
   "keywords": [
     "analytics",
@@ -28,7 +28,6 @@
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
-    "tsup": "^8.3.5",
     "typescript": "^5.3.3"
   },
   "files": [

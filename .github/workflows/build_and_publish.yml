@@ -36,7 +36,7 @@ jobs:
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
         run: bun publish --provenance --access public
         env:
-          NPM_CONFIG_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Github Release
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
         uses: softprops/action-gh-release@v2

@@ -1,4 +1,13 @@
-# 0.2.0 (2025-11-15)
+## [0.2.1](https://github.com/iloveitaly/analytics-plugin-rewardful/compare/v0.2.0...v0.2.1) (2025-11-26)
+
+
+### Bug Fixes
+
+* correct bun publish for oidc ([cc28d58](https://github.com/iloveitaly/analytics-plugin-rewardful/commit/cc28d58083efb54761facbbc061a04b1eadd5cca))
+
+
+
+# [0.2.0](https://github.com/iloveitaly/analytics-plugin-rewardful/compare/c6af71fe34b75bf739fd45e9a2a324ba46170d44...v0.2.0) (2025-11-15)
 
 
 ### Bug Fixes

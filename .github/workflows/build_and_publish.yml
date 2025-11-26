@@ -34,9 +34,7 @@ jobs:
           output-file: "CHANGELOG.md"
       - name: Publish to NPM
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
-        run: bun publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish --access public
       - name: Github Release
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
         uses: softprops/action-gh-release@v2

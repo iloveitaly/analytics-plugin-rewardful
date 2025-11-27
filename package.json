@@ -1,6 +1,6 @@
 {
   "name": "analytics-plugin-rewardful",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "Rewardful plugin for Analytics",
   "type": "module",
   "main": "dist/index.js",

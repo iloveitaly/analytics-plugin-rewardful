@@ -1,3 +1,12 @@
+## [0.2.8](https://github.com/iloveitaly/analytics-plugin-rewardful/compare/v0.2.7...v0.2.8) (2025-11-27)
+
+
+### Bug Fixes
+
+* will it work only with bun? ([7d2bf9e](https://github.com/iloveitaly/analytics-plugin-rewardful/commit/7d2bf9ef3e5606baa832192c6f6c45518b4d396f))
+
+
+
 ## [0.2.7](https://github.com/iloveitaly/analytics-plugin-rewardful/compare/v0.2.6...v0.2.7) (2025-11-27)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * triggering a build ([15e8191](https://github.com/iloveitaly/analytics-plugin-rewardful/commit/15e81916ad442811b9346e2a4868c943444ad333))
-
-
-
-## [0.2.3](https://github.com/iloveitaly/analytics-plugin-rewardful/compare/v0.2.2...v0.2.3) (2025-11-27)
-
-
-### Bug Fixes
-
-* can we get oidc working with bun to build and npm to publish ([ed27f98](https://github.com/iloveitaly/analytics-plugin-rewardful/commit/ed27f9851a277eac558bdb119b84408ae9be6757))
 
 
 

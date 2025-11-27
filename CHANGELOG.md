@@ -1,3 +1,12 @@
+## [0.2.9](https://github.com/iloveitaly/analytics-plugin-rewardful/compare/v0.2.8...v0.2.9) (2025-11-27)
+
+
+### Bug Fixes
+
+* looks like bun bublish does not work at all ([32bcc96](https://github.com/iloveitaly/analytics-plugin-rewardful/commit/32bcc96134657a6b5fb933d8c0124e88211c25a0))
+
+
+
 ## [0.2.8](https://github.com/iloveitaly/analytics-plugin-rewardful/compare/v0.2.7...v0.2.8) (2025-11-27)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * add --provenance ([57d6329](https://github.com/iloveitaly/analytics-plugin-rewardful/commit/57d6329420364992fb7f9675b11c608958f278b4))
-
-
-
-## [0.2.4](https://github.com/iloveitaly/analytics-plugin-rewardful/compare/v0.2.3...v0.2.4) (2025-11-27)
-
-
-### Bug Fixes
-
-* triggering a build ([15e8191](https://github.com/iloveitaly/analytics-plugin-rewardful/commit/15e81916ad442811b9346e2a4868c943444ad333))
 
 
 

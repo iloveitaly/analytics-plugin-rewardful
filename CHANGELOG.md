@@ -1,3 +1,12 @@
+## [0.2.4](https://github.com/iloveitaly/analytics-plugin-rewardful/compare/v0.2.3...v0.2.4) (2025-11-27)
+
+
+### Bug Fixes
+
+* triggering a build ([15e8191](https://github.com/iloveitaly/analytics-plugin-rewardful/commit/15e81916ad442811b9346e2a4868c943444ad333))
+
+
+
 ## [0.2.3](https://github.com/iloveitaly/analytics-plugin-rewardful/compare/v0.2.2...v0.2.3) (2025-11-27)
 
 

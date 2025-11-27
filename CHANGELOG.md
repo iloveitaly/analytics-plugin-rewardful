@@ -1,3 +1,12 @@
+## [0.2.6](https://github.com/iloveitaly/analytics-plugin-rewardful/compare/v0.2.5...v0.2.6) (2025-11-27)
+
+
+### Bug Fixes
+
+* let's try pnpm ([493ad36](https://github.com/iloveitaly/analytics-plugin-rewardful/commit/493ad367c1e7003bef43ae0aa1aa6845a615d1f7))
+
+
+
 ## [0.2.5](https://github.com/iloveitaly/analytics-plugin-rewardful/compare/v0.2.4...v0.2.5) (2025-11-27)
 
 
@@ -32,15 +41,6 @@
 
 * maybe using npm will fix the issue ([8c1341a](https://github.com/iloveitaly/analytics-plugin-rewardful/commit/8c1341adbc382ac3c8ac2c5a87d40db2060e7c4f))
 * prob won't fix it ([72632f5](https://github.com/iloveitaly/analytics-plugin-rewardful/commit/72632f567c03dcd2f650318950c8eb91aa4a9974))
-
-
-
-## [0.2.1](https://github.com/iloveitaly/analytics-plugin-rewardful/compare/v0.2.0...v0.2.1) (2025-11-26)
-
-
-### Bug Fixes
-
-* correct bun publish for oidc ([cc28d58](https://github.com/iloveitaly/analytics-plugin-rewardful/commit/cc28d58083efb54761facbbc061a04b1eadd5cca))
 
 
 

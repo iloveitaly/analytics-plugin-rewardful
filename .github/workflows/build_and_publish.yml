@@ -35,7 +35,7 @@ jobs:
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
         # bun publish does not work with OIDC
         # run: bun publish --provenance --access public
-        run: npm publish --provenance --access public
+        run: pnpm publish --provenance --access public
       - name: Github Release
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
         uses: softprops/action-gh-release@v2

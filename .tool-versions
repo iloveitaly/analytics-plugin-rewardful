@@ -1,7 +1,2 @@
 bun latest
-node latest
 npm latest
-
-# cannot use `latest` on pnpm
-# https://github.com/jonathanmorley/asdf-pnpm/pull/41
-pnpm 10.22.0

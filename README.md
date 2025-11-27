@@ -64,9 +64,7 @@ For more information on the Rewardful JavaScript API, see:
 
 This plugin is written in TypeScript and includes type definitions.
 
-## License
-
-MIT
+## [MIT License](LICENSE.md)
 
 ## Related
 

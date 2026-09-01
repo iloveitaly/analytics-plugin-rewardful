@@ -1,3 +1,12 @@
+# [0.3.0](https://github.com/iloveitaly/analytics-plugin-rewardful/compare/v0.2.9...v0.3.0) (2026-09-01)
+
+
+### Features
+
+* add option to init analytics without enabling plugin ([#5](https://github.com/iloveitaly/analytics-plugin-rewardful/issues/5)) ([91d7b04](https://github.com/iloveitaly/analytics-plugin-rewardful/commit/91d7b045c1e0ab70d56877674ddd38c2ea55cd39))
+
+
+
 ## [0.2.9](https://github.com/iloveitaly/analytics-plugin-rewardful/compare/v0.2.8...v0.2.9) (2025-11-27)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * let's try pnpm ([493ad36](https://github.com/iloveitaly/analytics-plugin-rewardful/commit/493ad367c1e7003bef43ae0aa1aa6845a615d1f7))
-
-
-
-## [0.2.5](https://github.com/iloveitaly/analytics-plugin-rewardful/compare/v0.2.4...v0.2.5) (2025-11-27)
-
-
-### Bug Fixes
-
-* add --provenance ([57d6329](https://github.com/iloveitaly/analytics-plugin-rewardful/commit/57d6329420364992fb7f9675b11c608958f278b4))
 
 
 

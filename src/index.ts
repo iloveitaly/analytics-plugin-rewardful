@@ -39,6 +39,7 @@ type Metadata = Record<string, any>
 
 export interface RewardfulPluginConfig {
   apiKey: string
+  enabled?: boolean
 }
 
 // TODO feels like this should be in the analytics package as well
@@ -106,6 +107,7 @@ export default function rewardfulPlugin(
   return {
     name: "rewardful",
     config,
+    enabled: config.enabled ?? true,
 
     initialize({ config }: Params): void {
       // browser only
